@@ -26,7 +26,7 @@ jobs:
         run: |
           mkdir -p site
           cp index1.html site/index.html
-          cp styles.css site/styles.css
+          cp styles1.css site/styles1.css
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
