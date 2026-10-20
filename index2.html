@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L’Archive Sensible — V2</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Curseur signal -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Navigation -->
+  <nav class="fixed-nav">
+    <a href="#accueil" class="nav-link">Accueil</a>
+    <a href="#abramovic" class="nav-link">Abramović</a>
+    <a href="#bourgeois" class="nav-link">Bourgeois</a>
+    <a href="#lamarr" class="nav-link">Lamarr</a>
+    <a href="#nemo" class="nav-link">Némo</a>
+    <a href="#correspondances" class="nav-link">Correspondances</a>
+  </nav>
+
+  <!-- Accueil -->
+  <header class="hero" id="accueil">
+    <h1 class="main-title glitch" data-text="L’ARCHIVE SENSIBLE">
+      L’ARCHIVE SENSIBLE
+    </h1>
+
+    <p class="subtitle">
+      Corps, mémoire, signal et illusions : un portfolio d’inspirations
+      artistiques, philosophiques et technologiques.
+    </p>
+
+    <p class="instruction">
+      Survole les mots pour révéler les images.<br />
+      Clique sur une œuvre pour l’agrandir.<br />
+      Retourne les cartes pour découvrir les idées.
+    </p>
+
+    <a href="#abramovic" class="enter-button">Entrer dans l’archive</a>
+  </header>
+
+  <!-- Marina Abramović -->
+  <section class="artist-section" id="abramovic" data-theme="abramovic">
+    <div class="section-head">
+      <h2 class="artist-name glitch" data-text="MARINA ABRAMOVIĆ">
+        MARINA ABRAMOVIĆ
+      </h2>
+      <p class="artist-tagline">
+        Endurance · Présence · Corps · Échange
+      </p>
+    </div>
+
+    <div class="reveal-grid">
+      <figure class="reveal-card" data-title="The Artist Is Present — 2010" data-text="Pendant 736 heures, Marina Abramović reste immobile face aux visiteurs du MoMA. La présence devient l’œuvre.">
+        <div class="reveal-word">ENDURANCE</div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Marina_Abramovic_-_The_Cleaner_-_Palazzo_Strozzi_-_19_Sep_2018.jpg/640px-Marina_Abramovic_-_The_Cleaner_-_Palazzo_Strozzi_-_19_Sep_2018.jpg"
+          alt="Marina Abramović en performance"
+        />
+        <figcaption>The Artist Is Present — 2010</figcaption>
+      </figure>
+
+      <figure class="reveal-card" data-title="Rhythm 0 — 1974" data-text="Pendant six heures, l’artiste propose 72 objets au public. L’œuvre interroge la frontière entre passivité, contrôle et responsabilité.">
+        <div class="reveal-word">CONFIANCE</div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Marina_Abramovic_Rhythm_0_1974.jpg/640px-Marina_Abramovic_Rhythm_0_1974.jpg"
+          alt="Performance Rhythm 0 de Marina Abramović"
+        />
+        <figcaption>Rhythm 0 — 1974</figcaption>
+      </figure>
+
+      <figure class="reveal-card" data-title="Rest Energy — 1980" data-text="Avec Ulay, un arc est tendu vers le cœur d’Abramović. Le danger, la confiance et l’énergie deviennent une expérience partagée.">
+        <div class="reveal-word">ÉNERGIE</div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Ulay_and_Marina_Abramovic_-_Rest_Energy_1980.jpg/640px-Ulay_and_Marina_Abramovic_-_Rest_Energy_1980.jpg"
+          alt="Rest Energy, performance de Marina Abramović et Ulay"
+        />
+        <figcaption>Rest Energy — 1980</figcaption>
+      </figure>
+    </div>
+
+    <div class="flip-grid">
+      <article class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span>01</span>
+            <h3>LE CORPS</h3>
+            <p>Clique pour retourner</p>
+          </div>
+          <div class="flip-back">
+            <p>
+              Le corps n’est pas seulement un objet représenté : il devient
+              support, outil et lieu de l’expérience.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span>02</span>
+            <h3>LA PRÉSENCE</h3>
+            <p>Clique pour retourner</p>
+          </div>
+          <div class="flip-back">
+            <p>
+              Être présent, c’est accepter la durée, l’attention et la
+              vulnérabilité devant l’autre.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span>03</span>
+            <h3>LE PUBLIC</h3>
+            <p>Clique pour retourner</p>
+          </div>
+          <div class="flip-back">
+            <p>
+              Le spectateur n’est plus extérieur à l’œuvre : il participe à
+              sa tension et à sa signification.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Louise Bourgeois -->
+  <section class="artist-section" id="bourgeois" data-theme="bourgeois">
+    <div class="section-head">
+      <h2 class="artist-name glitch" data-text="LOUISE BOURGEOIS">
+        LOUISE BOURGEOIS
+      </h2>
+      <p class="artist-tagline">
+        Mémoire · Famille · Réparation · Araignées
+      </p>
+    </div>
+
+    <div class="reveal-grid">
+      <figure class="reveal-card" data-title="Maman — 1999" data-text="Cette immense araignée évoque la figure maternelle : protectrice, travailleuse, inquiétante et fragilisée.">
+        <div class="reveal-word">MÈRE</div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Maman_ZH.jpg/640px-Maman_ZH.jpg"
+          alt="Sculpture Maman de Louise Bourgeois"
+        />
+        <figcaption>Maman — 1999</figcaption>
+      </figure>
+
+      <figure class="reveal-card" data-title="Cells — 1991–2000" data-text="Les Cells sont des espaces clos, faits d’objets, de portes et de sculptures. Ils évoquent la mémoire, l’enfermement et le trauma.">
+        <div class="reveal-word">MÉMOIRE</div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Louise_Bourgeois_Cells.jpg/640px-Louise_Bourgeois_Cells.jpg"
+          alt="Installation Cells de Louise Bourgeois"
+        />
+        <figcaption>Cells — 1991–2000</figcaption>
+      </figure>
+
+      <figure class="reveal-card" data-title="Fillette — 1968" data-text="Une œuvre suspendue entre douceur et malaise, qui interroge le corps, l’enfance et la sexualité.">
+        <div class="reveal-word">VULNÉRABILITÉ</div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Louise_Bourgeois_Fillette.jpg/640px-Louise_Bourgeois_Fillette.jpg"
+          alt="Fillette, sculpture de Louise Bourgeois"
+        />
+        <figcaption>Fillette — 1968</figcaption>
+      </figure>
+    </div>
+
+    <div class="flip-grid">
+      <article class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span>01</span>
+            <h3>LE FIL</h3>
+            <p>Clique pour retourner</p>
+          </div>
+          <div class="flip-back">
+            <p>
+              Coudre, tisser et réparer deviennent des gestes de mémoire :
+              réparer ne veut pas dire effacer la blessure.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span>02</span>
+            <h3>LA MAISON</h3>
+            <p>Clique pour retourner</p>
+          </div>
+          <div class="flip-back">
+            <p>
+              La maison peut protéger, mais aussi enfermer. Elle devient le
+              théâtre des souvenirs familiaux.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span>03</span>
+            <h3>L’ARAIGNÉE</h3>
+            <p>Clique pour retourner</p>
+          </div>
+          <div class="flip-back">
+            <p>
+              À la fois effrayante et protectrice, l’araignée représente la
+              mère qui tisse, construit et répare.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Hedy Lamarr -->
+  <section class="artist-section" id="lamarr" data-theme="lamarr">
+    <div class="section-head">
+      <h2 class="artist-name glitch" data-text="HEDY LAMARR">
+        HEDY LAMARR
+      </h2>
+      <p class="artist-tagline">
+        Cinéma · Invention · Signal · Double identité
+      </p>
+    </div>
+
+    <div class="reveal-grid">
+      <figure class="reveal-card" data-title="Hedy Lamarr, actrice — années 1940" data-text="Star hollywoodienne, Lamarr est souvent réduite à son image à l’écran, alors qu’elle développe parallèlement une pensée technique brillante.">
+        <div class="reveal-word">IMAGE</div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Hedy_Lamarr_1944.jpg/640px-Hedy_Lamarr_1944.jpg"
+          alt="Portrait de Hedy Lamarr en 1944"
+        />
+        <figcaption>Hedy Lamarr — années 1940</figcaption>
+      </figure>
+
+      <figure class="reveal-card" data-title="Brevet du frequency hopping — 1942" data-text="Avec George Antheil, elle dépose un brevet pour un système de sauts de fréquences, ancêtre de technologies sans fil actuelles.">
+        <div class="reveal-word">SIGNAL</div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Hedy_Lamarr_patent.jpg/640px-Hedy_Lamarr_patent.jpg"
+          alt="Brevet de Hedy Lamarr et George Antheil"
+        />
+        <figcaption>Brevet du frequency hopping — 1942</figcaption>
+      </figure>
+
+      <figure class="reveal-card" data-title="Ziegfeld Girl — 1941" data-text="Derrière le glamour du cinéma, Lamarr imagine des systèmes de communication destinés à résister au brouillage radio.">
+        <div class="reveal-word">INVENTION</div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Hedy_Lamarr_Ziegfeld_Girl.jpg/640px-Hedy_Lamarr_Ziegfeld_Girl.jpg"
+          alt="Hedy Lamarr dans Ziegfeld Girl"
+        />
+        <figcaption>Ziegfeld Girl — 1941</figcaption>
+      </figure>
+    </div>
+
+    <div class="flip-grid">
+      <article class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span>01</span>
+            <h3>LE DOUBLE</h3>
+            <p>Clique pour retourner</p>
+          </div>
+          <div class="flip-back">
+            <p>
+              Actrice et inventrice : deux identités publiques que l’histoire
+              a longtemps eu du mal à réunir.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span>02</span>
+            <h3>L’INVISIBLE</h3>
+            <p>Clique pour retourner</p>
+          </div>
+          <div class="flip-back">
+            <p>
+              Le signal ne se voit pas, mais il organise la communication.
+              L’invention peut exister avant sa reconnaissance.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span>03</span>
+            <h3>LA RECONNAISSANCE</h3>
+            <p>Clique pour retourner</p>
+          </div>
+          <div class="flip-back">
+            <p>
+              Son travail technique est reconnu tardivement, rappelant combien
+              les contributions des femmes restent souvent invisibilisées.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Biennale Némo -->
+  <section class="artist-section" id="nemo" data-theme="nemo">
+    <div class="section-head">
+      <h2 class="artist-name glitch" data-text="BIENNALE NÉMO">
+        BIENNALE NÉMO
+      </h2>
+      <p class="artist-tagline">
+        Art numérique · Science · Performance · Illusions
+      </p>
+    </div>
+
+    <div class="reveal-grid">
+      <figure class="reveal-card" data-title="Les Illusions retrouvées — 2025–2026" data-text="La Biennale Némo explore les illusions produites par les technologies immersives, entre réalité, image et perception.">
+        <div class="reveal-word">ILLUSION</div>
+        <img
+          src="https://www.biennalenemo.fr/wp-content/uploads/2025/10/nemo-biennale-2025.jpg"
+          alt="Visuel de la Biennale Némo"
+        />
+        <figcaption>Les Illusions retrouvées — 2025–2026</figcaption>
+      </figure>
+
+      <figure class="reveal-card" data-title="Installations immersives" data-text="Les installations numériques transforment l’espace d’exposition en environnement sensible et réactif.">
+        <div class="reveal-word">IMMERSION</div>
+        <img
+          src="https://www.biennalenemo.fr/wp-content/uploads/2023/11/installation-nemo.jpg"
+          alt="Installation numérique de la Biennale Némo"
+        />
+        <figcaption>Installations immersives</figcaption>
+      </figure>
+
+      <figure class="reveal-card" data-title="Performances audiovisuelles" data-text="Son, lumière, image et code se rencontrent dans des performances en direct.">
+        <div class="reveal-word">SIGNAL</div>
+        <img
+          src="https://www.biennalenemo.fr/wp-content/uploads/2023/11/performance-audiovisuelle.jpg"
+          alt="Performance audiovisuelle de la Biennale Némo"
+        />
+        <figcaption>Performances audiovisuelles</figcaption>
+      </figure>
+    </div>
+
+    <div class="flip-grid">
+      <article class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span>01</span>
+            <h3>LE CODE</h3>
+            <p>Clique pour retourner</p>
+          </div>
+          <div class="flip-back">
+            <p>
+              Le code n’est pas seulement un outil : il peut devenir matière
+              visuelle, sonore et poétique.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span>02</span>
+            <h3>LE CORPS NUMÉRIQUE</h3>
+            <p>Clique pour retourner</p>
+          </div>
+          <div class="flip-back">
+            <p>
+              Les technologies prolongent le corps, le mesurent, le transforment
+              et parfois le déplacent.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span>03</span>
+            <h3>LA PERCEPTION</h3>
+            <p>Clique pour retourner</p>
+          </div>
+          <div class="flip-back">
+            <p>
+              Voir n’est jamais neutre : l’image, le son et l’espace façonnent
+              ce que nous croyons être réel.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Correspondances -->
+  <section class="artist-section" id="correspondances" data-theme="correspondances">
+    <div class="section-head">
+      <h2 class="artist-name glitch" data-text="CORRESPONDANCES">
+        CORRESPONDANCES
+      </h2>
+      <p class="artist-tagline">
+        Choisis deux références pour créer une connexion.
+      </p>
+    </div>
+
+    <div class="connection-tool">
+      <select id="firstChoice">
+        <option value="">Première référence</option>
+        <option value="abramovic">Marina Abramović</option>
+        <option value="bourgeois">Louise Bourgeois</option>
+        <option value="lamarr">Hedy Lamarr</option>
+        <option value="nemo">Biennale Némo</option>
+      </select>
+
+      <span class="connection-symbol">+</span>
+
+      <select id="secondChoice">
+        <option value="">Seconde référence</option>
+        <option value="abramovic">Marina Abramović</option>
+        <option value="bourgeois">Louise Bourgeois</option>
+        <option value="lamarr">Hedy Lamarr</option>
+        <option value="nemo">Biennale Némo</option>
+      </select>
+
+      <button id="createConnection" class="enter-button">
+        Créer la correspondance
+      </button>
+    </div>
+
+    <div class="connection-result" id="connectionResult">
+      <p class="placeholder">
+        La mémoire, le corps et le signal peuvent se répondre.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>
+      « L’art doit choquer, la beauté doit troubler. » — Jean Cocteau
+    </p>
+    <p class="small">
+      L’Archive Sensible — projet personnel · images utilisées à des fins
+      pédagogiques et non commerciales.
+    </p>
+  </footer>
+
+  <!-- Zoom sur œuvre -->
+  <div class="zoom-overlay" id="zoomOverlay">
+    <button class="zoom-close" id="zoomClose" aria-label="Fermer">×</button>
+
+    <div class="zoom-content">
+      <img id="zoomImage" src="" alt="" />
+      <div class="zoom-text">
+        <h3 id="zoomTitle"></h3>
+        <p id="zoomDescription"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

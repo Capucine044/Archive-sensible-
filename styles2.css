@@ -1,0 +1,568 @@
+/* ===== Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255, 51, 102, 0.12), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(51, 255, 153, 0.08), transparent 45%),
+    #08080c;
+  color: #e8e8e8;
+  font-family: "Courier New", monospace;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ===== Curseur signal ===== */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #ff3366;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition:
+    width 0.25s ease,
+    height 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: #33ff99;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.7;
+  transition:
+    width 0.25s ease,
+    height 0.25s ease,
+    background-color 0.25s ease;
+}
+
+body[data-theme="abramovic"] .cursor {
+  border-color: #ff3366;
+}
+
+body[data-theme="bourgeois"] .cursor {
+  border-color: #d9b8ff;
+}
+
+body[data-theme="lamarr"] .cursor {
+  border-color: #4fd8ff;
+}
+
+body[data-theme="nemo"] .cursor {
+  border-color: #33ff99;
+}
+
+body[data-theme="correspondances"] .cursor {
+  border-color: #ffd166;
+}
+
+.cursor.grow {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 51, 102, 0.15);
+}
+
+/* ===== Navigation ===== */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: rgba(8, 8, 12, 0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 51, 102, 0.25);
+}
+
+.nav-link {
+  color: #e8e8e8;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ff3366;
+}
+
+/* ===== Hero ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 1.5rem 5rem;
+}
+
+.main-title {
+  font-size: clamp(2.4rem, 8vw, 5rem);
+  letter-spacing: 0.35rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  max-width: 620px;
+  font-size: 1.05rem;
+  opacity: 0.75;
+  margin-bottom: 2rem;
+}
+
+.instruction {
+  max-width: 540px;
+  font-size: 0.9rem;
+  opacity: 0.55;
+  margin-bottom: 2.5rem;
+}
+
+.enter-button {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  border: 1px solid #ff3366;
+  color: #ff3366;
+  background: transparent;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 0.85rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.enter-button:hover {
+  background: #ff3366;
+  color: #08080c;
+  transform: translateY(-2px);
+}
+
+/* ===== Sections artistes ===== */
+.artist-section {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.artist-name {
+  font-size: clamp(1.8rem, 6vw, 3.2rem);
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  color: #ff3366;
+  margin-bottom: 0.8rem;
+}
+
+.artist-tagline {
+  opacity: 0.6;
+  font-size: 0.95rem;
+}
+
+/* ===== Images qui se révèlent ===== */
+.reveal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.8rem;
+  margin-bottom: 4rem;
+}
+
+.reveal-card {
+  position: relative;
+  height: 360px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  cursor: pointer;
+  background: #101018;
+}
+
+.reveal-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.08);
+  filter: grayscale(100%) contrast(1.15);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+.reveal-card:hover img,
+.reveal-card:focus-within img {
+  opacity: 0.9;
+  transform: scale(1);
+  filter: grayscale(0%) contrast(1);
+}
+
+.reveal-word {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.35rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(8, 8, 12, 0.82);
+  transition: opacity 0.5s ease;
+}
+
+.reveal-card:hover .reveal-word,
+.reveal-card:focus-within .reveal-word {
+  opacity: 0;
+}
+
+.reveal-card figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08rem;
+  background: linear-gradient(to top, rgba(8, 8, 12, 0.92), transparent);
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.reveal-card:hover figcaption,
+.reveal-card:focus-within figcaption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Cartes qui se retournent ===== */
+.flip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+.flip-card {
+  height: 250px;
+  perspective: 1200px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.75s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.flip-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.flip-front {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.flip-front span {
+  font-size: 0.7rem;
+  color: #ff3366;
+  letter-spacing: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.flip-front h3 {
+  font-size: 1.35rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.flip-front p {
+  margin-top: 1rem;
+  font-size: 0.72rem;
+  opacity: 0.5;
+}
+
+.flip-back {
+  background: #ff3366;
+  color: #08080c;
+  transform: rotateY(180deg);
+  font-size: 0.92rem;
+}
+
+/* ===== Correspondances ===== */
+.connection-tool {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.connection-tool select {
+  min-width: 230px;
+  padding: 0.85rem 1rem;
+  background: #101018;
+  color: #e8e8e8;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+.connection-symbol {
+  font-size: 1.5rem;
+  color: #ff3366;
+}
+
+.connection-result {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  text-align: center;
+}
+
+.connection-result .placeholder {
+  opacity: 0.55;
+  font-style: italic;
+}
+
+.connection-result strong {
+  color: #ff3366;
+}
+
+/* ===== Zoom sur œuvre ===== */
+.zoom-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(4, 4, 8, 0.94);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+}
+
+.zoom-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.zoom-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  gap: 2rem;
+  max-width: 1050px;
+  width: 100%;
+  max-height: 85vh;
+  overflow: auto;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 51, 102, 0.35);
+  border-radius: 12px;
+  background: #0c0c14;
+}
+
+.zoom-content img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.zoom-text h3 {
+  color: #ff3366;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.zoom-text p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.zoom-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.4rem;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ff3366;
+  border-radius: 50%;
+  background: transparent;
+  color: #ff3366;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.zoom-close:hover {
+  background: #ff3366;
+  color: #08080c;
+}
+
+/* ===== Footer ===== */
+.footer {
+  padding: 4rem 1.5rem 5rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  opacity: 0.7;
+}
+
+.footer .small {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+/* ===== Effet glitch ===== */
+.glitch {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.glitch::before {
+  color: #ff3366;
+  clip-path: inset(20% 0 55% 0);
+  animation: glitchOne 2.8s infinite steps(2, end);
+}
+
+.glitch::after {
+  color: #33ff99;
+  clip-path: inset(60% 0 15% 0);
+  animation: glitchTwo 3.4s infinite steps(2, end);
+}
+
+@keyframes glitchOne {
+  0%, 92%, 100% {
+    transform: translate(0);
+  }
+  94% {
+    transform: translate(-3px, 2px);
+  }
+  96% {
+    transform: translate(3px, -2px);
+  }
+}
+
+@keyframes glitchTwo {
+  0%, 90%, 100% {
+    transform: translate(0);
+  }
+  93% {
+    transform: translate(3px, -1px);
+  }
+  97% {
+    transform: translate(-3px, 2px);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 760px) {
+  .fixed-nav {
+    gap: 0.8rem;
+    padding: 0.8rem;
+  }
+
+  .nav-link {
+    font-size: 0.65rem;
+  }
+
+  .reveal-card {
+    height: 300px;
+  }
+
+  .zoom-content {
+    grid-template-columns: 1fr;
+  }
+
+  .connection-tool {
+    flex-direction: column;
+  }
+
+  .connection-symbol {
+    transform: rotate(90deg);
+  }
+}
