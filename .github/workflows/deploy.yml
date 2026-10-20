@@ -1,4 +1,4 @@
-name: Deploy index1 to GitHub Pages
+name: Deploy index2 to GitHub Pages
 
 on:
   push:
@@ -22,11 +22,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Use index1.html as the site entry point
+      - name: Use index2.html as the site entry point
         run: |
           mkdir -p site
-          cp index1.html site/index.html
-          cp styles1.css site/styles1.css
+          cp index2.html site/index.html
+          cp styles2.css site/styles.css
+          cp script2.js site/script.js
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
