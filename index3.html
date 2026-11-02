@@ -3,54 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="L’Archive Sensible : un espace web sensible autour du corps, de la mémoire, du signal et des illusions." />
-  <title>L’Archive Sensible — Ce qui reste quand on touche</title>
+  <title>L’Archive Sensible — Ce qui se dérègle</title>
 
   <link rel="stylesheet" href="styles3.css" />
+  <script src="script3.js" defer></script>
 </head>
 
 <body>
-  <!-- Présence lumineuse : souris sur ordinateur, toucher sur mobile -->
-  <div class="presence" id="presence" aria-hidden="true"></div>
+  <header class="opening">
+    <p class="small-label">archive sensible · version 4</p>
 
-  <!-- Navigation accessible -->
-  <nav class="site-nav" aria-label="Navigation principale">
-    <a href="#abramovic">Abramović</a>
-    <a href="#bourgeois">Bourgeois</a>
-    <a href="#lamarr">Lamarr</a>
-    <a href="#nemo">Némo</a>
-  </nav>
+    <h1 class="site-title glitch" data-text="CE QUI SE DÉRÈGLE">
+      CE QUI SE DÉRÈGLE
+    </h1>
+
+    <p class="opening-text">
+      Toucher une image ne l’explique pas.<br />
+      Cela la déplace, l’inverse, l’efface ou la fait revenir.
+    </p>
+
+    <p class="opening-help">
+      Clique sur les images.<br />
+      Certaines changent. D’autres résistent.<br />
+      Il n’y a rien à gagner.
+    </p>
+  </header>
 
   <main>
-    <!-- Accueil -->
-    <header class="opening" id="accueil">
-      <p class="opening-number">01 — entrée</p>
-
-      <h1 class="site-title glitch" data-text="L’ARCHIVE SENSIBLE">
-        L’ARCHIVE SENSIBLE
-      </h1>
-
-      <p class="opening-line">
-        Ce qui reste quand on touche.<br />
-        Ce qui tremble quand on regarde.<br />
-        Ce qui revient quand on oublie.
-      </p>
-
-      <p class="opening-help">
-        Fais défiler.<br />
-        Touche une image.<br />
-        Laisse les fragments se déplacer.
-      </p>
-
-      <a class="silent-link" href="#abramovic">
-        Entrer dans l’archive
-      </a>
-    </header>
-
     <!-- Marina Abramović -->
-    <section class="fragment-section" id="abramovic" data-tone="red">
-      <div class="section-index">
-        <span>02</span>
+    <section class="archive-section" id="abramovic">
+      <div class="section-marker">
+        <span>01</span>
         <span>corps</span>
         <span>présence</span>
       </div>
@@ -59,64 +42,42 @@
         MARINA ABRAMOVIĆ
       </h2>
 
-      <p class="artist-intro">
-        Le corps devient un lieu d’expérience. La performance rend visible
-        la durée, la vulnérabilité et la relation à l’autre.
+      <p class="section-text">
+        La performance rend visible ce qui d’habitude reste invisible :
+        la fatigue, l’attention, la peur et la durée.
       </p>
 
-      <article class="work" tabindex="0">
-        <div class="work-image">
+      <div class="drift-grid">
+        <figure class="drift-piece" data-phrase="La présence change selon celui qui regarde.">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Marina_Abramovi%C4%87%2C_The_Artist_is_Present%2C_2010_%282%29.jpg/640px-Marina_Abramovi%C4%87%2C_The_Artist_is_Present%2C_2010_%282%29.jpg"
-            alt="Marina Abramović assise face à un visiteur pendant The Artist Is Present, au MoMA en 2010."
+            alt="Marina Abramović pendant The Artist Is Present, MoMA, 2010."
             loading="lazy"
           />
-        </div>
+          <figcaption>
+            <strong>The Artist Is Present</strong><br />
+            2010 · MoMA, New York
+          </figcaption>
+        </figure>
 
-        <div class="work-text">
-          <h3>The Artist Is Present</h3>
-          <p class="work-date">2010 · MoMA, New York</p>
-          <p>
-            Pendant 736 heures, Marina Abramović reste immobile face aux
-            visiteurs. Sans parole, la rencontre devient l’œuvre : présence,
-            attention et échange.
-          </p>
-          <p class="work-quote">
-            « La performance est un état d’esprit qui se transforme en
-            présence. »
-          </p>
-        </div>
-      </article>
-
-      <article class="work work-offset" tabindex="0">
-        <div class="work-image">
+        <figure class="drift-piece" data-phrase="Deux corps liés deviennent une seule durée.">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Abramovic_Ulay.jpg/640px-Abramovic_Ulay.jpg"
-            alt="Couverture du livre 3 Performances de Marina Abramović et Ulay, publié en 1978."
+            alt="Couverture de 3 Performances, Marina Abramović et Ulay, 1978."
             loading="lazy"
           />
-        </div>
-
-        <div class="work-text">
-          <h3>Relation in Time</h3>
-          <p class="work-date">1977 · avec Ulay</p>
-          <p>
-            Abramović et Ulay restent dos à dos, les cheveux liés, pendant
-            seize heures. Leur corps devient un lieu de tension, de dépendance
-            et de résistance.
-          </p>
-          <p class="work-quote">
-            « Nous nous sommes liés l’un à l’autre pour éprouver la force
-            de la relation. »
-          </p>
-        </div>
-      </article>
+          <figcaption>
+            <strong>Relation in Time</strong><br />
+            1977 · avec Ulay
+          </figcaption>
+        </figure>
+      </div>
     </section>
 
     <!-- Louise Bourgeois -->
-    <section class="fragment-section" id="bourgeois" data-tone="violet">
-      <div class="section-index">
-        <span>03</span>
+    <section class="archive-section" id="bourgeois">
+      <div class="section-marker">
+        <span>02</span>
         <span>mémoire</span>
         <span>réparation</span>
       </div>
@@ -125,85 +86,54 @@
         LOUISE BOURGEOIS
       </h2>
 
-      <p class="artist-intro">
-        La sculpture devient une manière de garder, de coudre et de réparer
-        ce que la mémoire ne peut pas effacer.
+      <p class="section-text">
+        Réparer ne veut pas dire effacer. Le fil, la maison et l’araignée
+        deviennent des formes de mémoire.
       </p>
 
-      <article class="work" tabindex="0">
-        <div class="work-image">
+      <div class="drift-grid">
+        <figure class="drift-piece" data-phrase="La mère protège, tisse et inquiète.">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/%22Maman%22_de_Louise_Bourgeois_%28Mus%C3%A9e_Guggenheim%2C_Bilbao%29_%283452402487%29.jpg/640px-%22Maman%22_de_Louise_Bourgeois_%28Mus%C3%A9e_Guggenheim%2C_Bilbao%29_%283452402487%29.jpg"
-            alt="Sculpture Maman de Louise Bourgeois devant le musée Guggenheim de Bilbao."
+            alt="Sculpture Maman de Louise Bourgeois à Bilbao."
             loading="lazy"
           />
-        </div>
+          <figcaption>
+            <strong>Maman</strong><br />
+            1999 · bronze, acier et marbre
+          </figcaption>
+        </figure>
 
-        <div class="work-text">
-          <h3>Maman</h3>
-          <p class="work-date">1999 · bronze, acier inoxydable et marbre</p>
-          <p>
-            Une araignée monumentale, à la fois protectrice et inquiétante.
-            Elle évoque la mère, le travail, la protection et la fragilité
-            des liens familiaux.
-          </p>
-          <p class="work-quote">
-            « L’araignée est une réparation. Elle répare ce qui a été brisé. »
-          </p>
-        </div>
-      </article>
-
-      <article class="work work-offset" tabindex="0">
-        <div class="work-image">
+        <figure class="drift-piece" data-phrase="Une porte fermée n’efface pas ce qu’elle contient.">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Looking-up-at-maman.jpg/640px-Looking-up-at-maman.jpg"
-            alt="Vue en contre-plongée de la sculpture Maman de Louise Bourgeois à Ottawa."
+            alt="Vue en contre-plongée de Maman, Louise Bourgeois, Ottawa."
             loading="lazy"
           />
-        </div>
+          <figcaption>
+            <strong>Cells</strong><br />
+            1991–2000 · installations
+          </figcaption>
+        </figure>
 
-        <div class="work-text">
-          <h3>Cells</h3>
-          <p class="work-date">1991–2000 · installations</p>
-          <p>
-            Les <em>Cells</em> sont des espaces clos construits avec des portes,
-            des objets et des sculptures. Ils évoquent l’enfermement, le souvenir
-            et la difficulté d’habiter une mémoire.
-          </p>
-          <p class="work-quote">
-            « La mémoire est une répétition. Elle revient, encore et encore. »
-          </p>
-        </div>
-      </article>
-
-      <article class="work" tabindex="0">
-        <div class="work-image">
+        <figure class="drift-piece" data-phrase="Le corps devient une forme suspendue entre douceur et malaise.">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Louise_Bourgeois_Fillette.jpg/640px-Louise_Bourgeois_Fillette.jpg"
-            alt="Sculpture Fillette de Louise Bourgeois, forme allongée suspendue."
+            alt="Sculpture Fillette de Louise Bourgeois."
             loading="lazy"
           />
-        </div>
-
-        <div class="work-text">
-          <h3>Fillette</h3>
-          <p class="work-date">1968 · latex sur plâtre</p>
-          <p>
-            Une forme suspendue entre douceur et malaise. L’œuvre interroge
-            le corps, l’enfance, la sexualité et la vulnérabilité.
-          </p>
-          <p class="work-quote">
-            « Je ne suis pas intéressée par la beauté. Je suis intéressée par
-            la vérité. »
-          </p>
-        </div>
-      </article>
+          <figcaption>
+            <strong>Fillette</strong><br />
+            1968 · latex sur plâtre
+          </figcaption>
+        </figure>
+      </div>
     </section>
 
     <!-- Hedy Lamarr -->
-    <section class="fragment-section" id="lamarr" data-tone="blue">
-      <div class="section-index">
-        <span>04</span>
+    <section class="archive-section" id="lamarr">
+      <div class="section-marker">
+        <span>03</span>
         <span>signal</span>
         <span>invention</span>
       </div>
@@ -212,64 +142,42 @@
         HEDY LAMARR
       </h2>
 
-      <p class="artist-intro">
-        Une actrice devenue inventrice. Une image publique qui cache une
-        pensée technique, un signal qui traverse l’invisible.
+      <p class="section-text">
+        Une image publique peut cacher une invention. Un signal peut exister
+        avant d’être reconnu.
       </p>
 
-      <article class="work" tabindex="0">
-        <div class="work-image">
+      <div class="drift-grid">
+        <figure class="drift-piece" data-phrase="L’image visible cache parfois une pensée technique.">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Hedy_Lamarr%2C_1939.jpg/640px-Hedy_Lamarr%2C_1939.jpg"
-            alt="Portrait noir et blanc de Hedy Lamarr en 1939."
+            alt="Portrait de Hedy Lamarr en 1939."
             loading="lazy"
           />
-        </div>
+          <figcaption>
+            <strong>Portrait</strong><br />
+            1939 · photographie
+          </figcaption>
+        </figure>
 
-        <div class="work-text">
-          <h3>Portrait, 1939</h3>
-          <p class="work-date">1939 · photographie</p>
-          <p>
-            Hedy Lamarr devient une star hollywoodienne, réduite souvent à son
-            image à l’écran. Pourtant, elle développe parallèlement une
-            réflexion technique sur les communications.
-          </p>
-          <p class="work-quote">
-            « Les films ont une durée limitée. Une invention peut durer
-            beaucoup plus longtemps. »
-          </p>
-        </div>
-      </article>
-
-      <article class="work work-offset" tabindex="0">
-        <div class="work-image">
+        <figure class="drift-piece" data-phrase="Le signal change de fréquence pour ne pas être capté.">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Hedy_Lamarr_in_a_1940_MGM_publicity_still.jpg/640px-Hedy_Lamarr_in_a_1940_MGM_publicity_still.jpg"
-            alt="Photographie publicitaire de Hedy Lamarr pour la MGM en 1940."
+            alt="Photographie publicitaire de Hedy Lamarr pour la MGM, 1940."
             loading="lazy"
           />
-        </div>
-
-        <div class="work-text">
-          <h3>Frequency Hopping</h3>
-          <p class="work-date">1942 · avec George Antheil</p>
-          <p>
-            Avec le compositeur George Antheil, elle imagine un système de
-            sauts de fréquences destiné à rendre les communications radio plus
-            difficiles à brouiller. Ce principe inspire plus tard des
-            technologies sans fil.
-          </p>
-          <p class="work-quote">
-            « L’invention ne demande pas forcément d’être vue immédiatement. »
-          </p>
-        </div>
-      </article>
+          <figcaption>
+            <strong>Frequency Hopping</strong><br />
+            1942 · avec George Antheil
+          </figcaption>
+        </figure>
+      </div>
     </section>
 
     <!-- Biennale Némo -->
-    <section class="fragment-section" id="nemo" data-tone="green">
-      <div class="section-index">
-        <span>05</span>
+    <section class="archive-section" id="nemo">
+      <div class="section-marker">
+        <span>04</span>
         <span>code</span>
         <span>perception</span>
       </div>
@@ -278,106 +186,62 @@
         BIENNALE NÉMO
       </h2>
 
-      <p class="artist-intro">
-        Entre art, science et technologie, l’image devient environnement.
-        Le code devient une matière sensible.
+      <p class="section-text">
+        L’image ne montre pas seulement : elle construit un espace,
+        une illusion, une manière d’être présent.
       </p>
 
-      <article class="work" tabindex="0">
-        <div class="work-image">
+      <div class="drift-grid">
+        <figure class="drift-piece" data-phrase="L’illusion déplace ce que nous croyons voir.">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/TeamLab_Planets_TOKYO_2022_02.jpg/640px-TeamLab_Planets_TOKYO_2022_02.jpg"
-            alt="Installation immersive avec projections numériques colorées et visiteurs."
+            alt="Installation immersive avec projections numériques."
             loading="lazy"
           />
-        </div>
+          <figcaption>
+            <strong>Les Illusions retrouvées</strong><br />
+            2025–2026 · Biennale Némo
+          </figcaption>
+        </figure>
 
-        <div class="work-text">
-          <h3>Les Illusions retrouvées</h3>
-          <p class="work-date">2025–2026 · Biennale Némo</p>
-          <p>
-            La Biennale Némo explore les illusions produites par les
-            technologies immersives. Elle interroge la frontière entre image,
-            espace et perception.
-          </p>
-          <p class="work-quote">
-            « L’illusion ne ment pas toujours : elle déplace ce que nous
-            croyons voir. »
-          </p>
-        </div>
-      </article>
-
-      <article class="work work-offset" tabindex="0">
-        <div class="work-image">
+        <figure class="drift-piece" data-phrase="L’espace numérique prolonge le corps.">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/TeamLab_Planets_TOKYO_2022_02.jpg/640px-TeamLab_Planets_TOKYO_2022_02.jpg"
-            alt="Installation immersive avec projections numériques colorées."
+            alt="Installation numérique immersive."
             loading="lazy"
           />
-        </div>
-
-        <div class="work-text">
-          <h3>Installations immersives</h3>
-          <p class="work-date">Art numérique · performance</p>
-          <p>
-            Les installations transforment l’espace d’exposition en
-            environnement réactif. Le visiteur ne regarde plus seulement :
-            il entre dans une situation.
-          </p>
-          <p class="work-quote">
-            « L’espace numérique n’est pas hors du corps : il le prolonge. »
-          </p>
-        </div>
-      </article>
+          <figcaption>
+            <strong>Installations immersives</strong><br />
+            art numérique · performance
+          </figcaption>
+        </figure>
+      </div>
     </section>
 
     <!-- Fin -->
-    <section class="closing">
-      <p class="opening-number">06 — sortie</p>
+    <section class="ending">
+      <p class="small-label">fin de l’archive</p>
 
-      <h2 class="closing-title glitch" data-text="CE QUI RESTE">
-        CE QUI RESTE
+      <h2 class="ending-title glitch" data-text="RIEN N’EST FIXE">
+        RIEN N’EST FIXE
       </h2>
 
       <p>
-        Une image, un geste, une fréquence, une mémoire.<br />
-        L’archive ne conserve pas seulement : elle fait revenir.
+        Une image peut revenir.<br />
+        Une mémoire peut changer de sens.<br />
+        Un signal peut devenir une forme.
       </p>
     </section>
-
-    <footer class="site-footer">
-      <p>
-        L’Archive Sensible — projet personnel.<br />
-        Images utilisées dans un cadre pédagogique et non commercial.
-      </p>
-    </footer>
   </main>
 
-  <!-- Fiche sensible d’une œuvre -->
-  <div
-    class="work-overlay"
-    id="workOverlay"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="overlayTitle"
-  >
-    <button class="overlay-close" id="overlayClose" aria-label="Fermer la fiche">
-      ×
-    </button>
+  <footer class="site-footer">
+    <p>
+      L’Archive Sensible — projet personnel.<br />
+      Images utilisées dans un cadre pédagogique et non commercial.
+    </p>
+  </footer>
 
-    <div class="overlay-card">
-      <img id="overlayImage" src="" alt="" />
-
-      <div class="overlay-text">
-        <p class="overlay-index" id="overlayIndex"></p>
-        <h3 id="overlayTitle"></h3>
-        <p class="overlay-date" id="overlayDate"></p>
-        <p id="overlayDescription"></p>
-        <p class="overlay-quote" id="overlayQuote"></p>
-      </div>
-    </div>
-  </div>
-
-  <script src="script3.js"></script>
+  <!-- Message sensible -->
+  <div class="drift-message" id="driftMessage" aria-live="polite"></div>
 </body>
 </html>
