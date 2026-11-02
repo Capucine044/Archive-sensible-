@@ -1,4 +1,4 @@
-name: Deploy index3 to GitHub Pages
+name: Deploy all versions to GitHub Pages
 
 on:
   push:
@@ -18,16 +18,29 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Use index3.html as the site entry point
+      - name: Prepare all site versions
         run: |
           mkdir -p site
-          cp index3.html site/index.html
-          cp styles3.css site/styles.css
-          cp script3.js 
+
+          # Copie tous les fichiers HTML présents à la racine
+          find . -maxdepth 1 -type f -name "index*.html" -exec cp {} site/ \;
+
+          # Copie tous les CSS et JavaScript
+          find . -maxdepth 1 -type f -name "*.css" -exec cp {} site/ \;
+          find . -maxdepth 1 -type f -name "*.js" -exec cp {} site/ \;
+
+          # Copie les images, si tu en as
+          if [ -d "images" ]; then
+            cp -r images site/images
+          fi
+
+          # Liste les fichiers publiés pour vérifier dans les logs
+          ls -la site
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -40,10 +53,13 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        
