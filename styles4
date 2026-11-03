@@ -1,0 +1,670 @@
+/* =========================
+   Base accessible
+   ========================= */
+:root {
+  --black: #050507;
+  --dark: #101017;
+  --white: #f5f5f5;
+  --grey: #c9c9c9;
+
+  --red: #ff4d6a;
+  --red-dark: #7a1626;
+  --bone: #e8e0cf;
+
+  --mint: #d8f3e3;
+  --water: #bfe7f5;
+  --pink: #ff9ec4;
+
+  --neon-green: #7dff9f;
+  --neon-purple: #c78bff;
+
+  --metal: #8d949c;
+  --rose: #ffc6d9;
+
+  --glitch-red: #ff4d6a;
+  --glitch-green: #4dff9f;
+  --focus: #ffd166;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: "Courier New", monospace;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a,
+button {
+  font-family: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+.quiz-option:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+
+/* =========================
+   Accueil
+   ========================= */
+.opening,
+.ending {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 7rem 1.5rem;
+}
+
+.opening-number {
+  color: var(--focus);
+  font-size: 0.8rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.site-title,
+.ending-title,
+.chapter-title {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.site-title {
+  font-size: clamp(2.4rem, 9vw, 5.4rem);
+  margin: 1.4rem 0;
+}
+
+.opening-text,
+.ending p {
+  max-width: 640px;
+  font-size: 1.15rem;
+}
+
+.opening-help {
+  margin-top: 2rem;
+  color: var(--grey);
+  font-size: 0.95rem;
+}
+
+.silent-link {
+  display: inline-block;
+  margin-top: 2.5rem;
+  padding: 1rem 1.7rem;
+  border: 2px solid var(--red);
+  color: var(--white);
+  text-decoration: none;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.silent-link:hover,
+.silent-link:focus-visible {
+  background: var(--red);
+  color: var(--black);
+}
+
+/* =========================
+   Chapitres
+   ========================= */
+.chapter {
+  position: relative;
+  padding: 7rem 1.5rem;
+  border-top: 6px solid var(--white);
+}
+
+.chapter-head {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+}
+
+.chapter-number {
+  font-size: 0.8rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.chapter-title {
+  font-size: clamp(2rem, 7vw, 3.8rem);
+  margin-bottom: 1.2rem;
+}
+
+.artist-line {
+  font-size: 1.15rem;
+  max-width: 720px;
+}
+
+/* ---------- Abramović ---------- */
+.chapter-abramovic {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 77, 106, 0.18), transparent 40%),
+    linear-gradient(180deg, #2a0a12, #12050a);
+  color: var(--white);
+}
+
+.chapter-abramovic .chapter-number {
+  color: var(--red);
+}
+
+.chapter-abramovic .chapter-title {
+  color: var(--red);
+}
+
+.chapter-abramovic .work {
+  border-color: var(--red);
+}
+
+/* ---------- Pipilotti Rist ---------- */
+.chapter-rist {
+  background:
+    radial-gradient(circle at 75% 20%, rgba(255, 158, 196, 0.28), transparent 42%),
+    linear-gradient(180deg, var(--mint), var(--water));
+  color: #06251f;
+}
+
+.chapter-rist .chapter-number {
+  color: #0b5f4a;
+}
+
+.chapter-rist .chapter-title {
+  color: #0b5f4a;
+}
+
+.chapter-rist .work {
+  border-color: #0b5f4a;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.chapter-rist .work-text p,
+.chapter-rist .work-date {
+  color: #123c33;
+}
+
+/* ---------- Biennale Némo ---------- */
+.chapter-nemo {
+  background:
+    radial-gradient(circle at 15% 25%, rgba(125, 255, 159, 0.22), transparent 38%),
+    radial-gradient(circle at 85% 70%, rgba(199, 139, 255, 0.22), transparent 42%),
+    #07070d;
+  color: var(--white);
+}
+
+.chapter-nemo .chapter-number {
+  color: var(--neon-green);
+}
+
+.chapter-nemo .chapter-title {
+  color: var(--neon-purple);
+}
+
+.chapter-nemo .work {
+  border-color: var(--neon-green);
+}
+
+/* ---------- Donna Haraway ---------- */
+.chapter-haraway {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 198, 217, 0.22), transparent 38%),
+    linear-gradient(135deg, #1b1d22, #2f333a 45%, #171a1f);
+  color: var(--white);
+}
+
+.chapter-haraway .chapter-number {
+  color: var(--rose);
+}
+
+.chapter-haraway .chapter-title {
+  color: var(--rose);
+}
+
+.chapter-haraway .work {
+  border-color: var(--rose);
+}
+
+/* ---------- Kaïro ---------- */
+.chapter-kairo {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 0, 0, 0.14), transparent 40%),
+    linear-gradient(180deg, #07070a, #0d0d12);
+  color: var(--white);
+}
+
+.chapter-kairo .chapter-number {
+  color: #ff4d4d;
+}
+
+.chapter-kairo .chapter-title {
+  color: #ff4d4d;
+}
+
+.chapter-kairo .work {
+  border-color: #ff4d4d;
+}
+
+/* ---------- The Curse ---------- */
+.chapter-curse {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 50%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.08), transparent 50%),
+    #141418;
+  color: var(--white);
+}
+
+.chapter-curse .chapter-number {
+  color: var(--focus);
+}
+
+.chapter-curse .chapter-title {
+  color: var(--focus);
+}
+
+.chapter-curse .work {
+  border-color: var(--focus);
+}
+
+/* ---------- OFF ---------- */
+.chapter-off {
+  background:
+    linear-gradient(180deg, #ffffff 0%, #ffffff 18%, #050507 18%);
+  color: var(--white);
+}
+
+.chapter-off .chapter-number {
+  color: var(--black);
+}
+
+.chapter-off .chapter-title {
+  color: var(--black);
+}
+
+.chapter-off .artist-line {
+  color: var(--black);
+}
+
+.chapter-off .work {
+  border-color: var(--white);
+}
+
+/* =========================
+   Œuvres
+   ========================= */
+.work {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1050px;
+  margin: 0 auto 5rem;
+  padding: 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.work-reverse .work-media {
+  order: 2;
+}
+
+.work-text h3 {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  margin-bottom: 0.7rem;
+}
+
+.work-date {
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  color: var(--grey);
+}
+
+.work-text p {
+  margin-bottom: 1.2rem;
+}
+
+.final-line {
+  border-left: 4px solid currentColor;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+/* =========================
+   Images et vidéos
+   ========================= */
+.image-placeholder,
+.video-placeholder {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  border: 2px dashed currentColor;
+  color: currentColor;
+}
+
+.image-placeholder span,
+.video-placeholder span {
+  font-size: 0.8rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+
+.video-placeholder {
+  min-height: 340px;
+}
+
+/* Texte par-dessus une vidéo */
+.overlay-work {
+  position: relative;
+}
+
+.overlay-work .work-media {
+  position: relative;
+}
+
+.overlay-text {
+  position: absolute;
+  inset: auto 1rem 1rem;
+  max-width: 640px;
+  padding: 1.2rem;
+  background: rgba(5, 5, 7, 0.82);
+  border: 2px solid var(--focus);
+  color: var(--white);
+}
+
+.overlay-text h3 {
+  color: var(--focus);
+}
+
+/* =========================
+   QCM
+   ========================= */
+.quiz {
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  border: 2px solid currentColor;
+}
+
+.quiz-question {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.quiz-option {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.7rem;
+  padding: 0.85rem 1rem;
+  background: transparent;
+  border: 2px solid currentColor;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.quiz-option:hover,
+.quiz-option:focus-visible {
+  background: currentColor;
+}
+
+.quiz-option.correct {
+  border-color: var(--neon-green);
+  color: var(--neon-green);
+}
+
+.quiz-option.wrong {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.quiz-feedback {
+  margin-top: 0.8rem;
+  font-weight: bold;
+}
+
+/* =========================
+   Citation surlignée
+   ========================= */
+.highlight-quote {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border-left: 5px solid var(--rose);
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.highlight-target {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 198, 217, 0.85),
+    rgba(255, 198, 217, 0.85)
+  );
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size 1.4s ease;
+}
+
+.highlight-quote.is-visible .highlight-target {
+  background-size: 100% 100%;
+}
+
+/* =========================
+   Spoiler
+   ========================= */
+.spoiler-box {
+  margin: 2rem 0;
+  border: 2px solid var(--focus);
+  padding: 1.2rem;
+}
+
+.spoiler-button {
+  padding: 0.9rem 1.4rem;
+  border: 2px solid var(--focus);
+  background: transparent;
+  color: var(--focus);
+  cursor: pointer;
+  font-size: 0.9rem;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+}
+
+.spoiler-button:hover,
+.spoiler-button:focus-visible {
+  background: var(--focus);
+  color: var(--black);
+}
+
+.spoiler-content {
+  margin-top: 1.2rem;
+}
+
+.spoiler-content.fly-away {
+  animation: flyAway 2.5s ease forwards;
+}
+
+@keyframes flyAway {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-140px);
+  }
+}
+
+/* =========================
+   Message d’archive
+   ========================= */
+.archive-message {
+  position: fixed;
+  bottom: 1.3rem;
+  left: 50%;
+  transform: translate(-50%, 12px);
+  max-width: min(90vw, 520px);
+  padding: 0.9rem 1.2rem;
+  background: rgba(5, 5, 7, 0.95);
+  border: 2px solid var(--focus);
+  color: var(--white);
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease,
+    transform 0.35s ease;
+  z-index: 2000;
+}
+
+.archive-message.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+/* =========================
+   Footer
+   ========================= */
+.site-footer {
+  padding: 4rem 1.5rem 6rem;
+  text-align: center;
+  border-top: 2px solid var(--white);
+  color: var(--grey);
+}
+
+/* =========================
+   Glitch
+   ========================= */
+.glitch {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.glitch::before {
+  color: var(--glitch-red);
+  clip-path: inset(18% 0 58% 0);
+  animation: glitchOne 3s infinite steps(2, end);
+}
+
+.glitch::after {
+  color: var(--glitch-green);
+  clip-path: inset(62% 0 12% 0);
+  animation: glitchTwo 3.6s infinite steps(2, end);
+}
+
+@keyframes glitchOne {
+  0%, 91%, 100% {
+    transform: translate(0);
+  }
+  93% {
+    transform: translate(-4px, 2px);
+  }
+  96% {
+    transform: translate(4px, -2px);
+  }
+}
+
+@keyframes glitchTwo {
+  0%, 89%, 100% {
+    transform: translate(0);
+  }
+  92% {
+    transform: translate(4px, -1px);
+  }
+  97% {
+    transform: translate(-4px, 2px);
+  }
+}
+
+/* =========================
+   Responsive
+   ========================= */
+@media (min-width: 820px) {
+  .work {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+  }
+
+  .work-reverse .work-media {
+    order: 2;
+  }
+
+  .overlay-text {
+    inset: auto 2rem 2rem;
+  }
+}
+
+@media (max-width: 819px) {
+  .chapter {
+    padding: 5rem 1rem;
+  }
+
+  .work {
+    padding: 1rem;
+  }
+
+  .overlay-text {
+    position: static;
+    margin-top: 1rem;
+  }
+}
+
+/* Accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
