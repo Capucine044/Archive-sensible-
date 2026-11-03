@@ -82,6 +82,8 @@ if (spoilerButton && spoilerContent) {
   });
 }
 
+
+
 // =========================
 // Messages sensibles
 // =========================
@@ -120,4 +122,30 @@ window.addEventListener("scroll", () => {
     lastMessageTime = now;
     showMessage();
   }
+// =========================
+// OFF : descente progressive
+// =========================
+const batterTrack = document.querySelector(".batter-track");
+const villagers = document.querySelectorAll(".villager");
+
+const offObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+      }
+    });
+  },
+  {
+    threshold: 0.25
+  }
+);
+
+if (batterTrack) {
+  offObserver.observe(batterTrack);
+}
+
+villagers.forEach((villager) => {
+  offObserver.observe(villager);
+});
 });
