@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archive Sensible</title>
+
+  <link rel="stylesheet" href="styles4.css" />
+  <script src="script4.js" defer></script>
+</head>
+
+<body>
+  <!-- =========================
+       ACCUEIL
+       ========================= -->
+  <header class="opening" id="accueil">
+    <p class="opening-number">archive sensible</p>
+
+    <h1 class="site-title glitch" data-text="ARCHIVE SENSIBLE">
+      ARCHIVE SENSIBLE
+    </h1>
+
+    <p class="opening-text">
+      Ce site réunit des références de culture et de pop culture qui
+      inspirent ma pensée et ma vie au quotidien.
+    </p>
+
+    <p class="opening-help">
+      Fais défiler.<br />
+      Les images, les textes et les questions réagissent.<br />
+      Il n’y a rien à gagner.
+    </p>
+
+    <a class="silent-link" href="#abramovic">
+      Entrer dans l’archive
+    </a>
+  </main>
+
+  <!-- =========================
+       SECTION 1 — MARINA ABRAMOVIĆ
+       ========================= -->
+  <section class="chapter chapter-abramovic" id="abramovic">
+    <div class="chapter-head">
+      <p class="chapter-number">01 — corps, risque, présence</p>
+
+      <h2 class="chapter-title glitch" data-text="MARINA ABRAMOVIĆ">
+        MARINA ABRAMOVIĆ
+      </h2>
+
+      <p class="artist-line">
+        Marina Abramović est une artiste serbe pionnière de la performance,
+        qui fait de son corps, de l’endurance et de la relation au public
+        les matériaux mêmes de son œuvre.
+      </p>
+    </div>
+
+    <!-- Rhythm 0 -->
+    <article class="work">
+      <div class="work-media">
+        <!-- IMAGE À AJOUTER : photographie ou document de Rhythm 0 -->
+        <div class="image-placeholder">
+          <span>IMAGE À AJOUTER</span>
+          <p>Rhythm 0 — 1974</p>
+        </div>
+      </div>
+
+      <div class="work-text">
+        <h3>Rhythm 0</h3>
+        <p class="work-date">1974 · performance</p>
+
+        <p>
+          Pendant six heures, Marina Abramović se place passivement devant
+          72 objets — dont un couteau et une arme — que le public peut
+          utiliser sur elle comme il le souhaite. La performance révèle
+          brutalement l’agressivité, la vulnérabilité et la responsabilité
+          du spectateur.
+        </p>
+
+        <div class="quiz" data-answer="c">
+          <p class="quiz-question">
+            Parmi ces objets, lesquels faisaient partie de <em>Rhythm 0</em> ?
+          </p>
+
+          <button class="quiz-option" data-value="a">
+            Une rose, du miel et une plume
+          </button>
+
+          <button class="quiz-option" data-value="b">
+            Un miroir, une télévision et un téléphone
+          </button>
+
+          <button class="quiz-option" data-value="c">
+            Un scalpel, un fouet et une arme chargée
+          </button>
+
+          <p class="quiz-feedback" aria-live="polite"></p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Relation in Space -->
+    <article class="work work-reverse">
+      <div class="work-media">
+        <!-- IMAGE À AJOUTER : documentation de Relation in Space -->
+        <div class="image-placeholder">
+          <span>IMAGE À AJOUTER</span>
+          <p>Relation in Space — 1976</p>
+        </div>
+      </div>
+
+      <div class="work-text">
+        <h3>Relation in Space</h3>
+        <p class="work-date">1976 · avec Ulay</p>
+
+        <p>
+          Les deux artistes nus se percutent à plusieurs reprises, de plus
+          en plus vite et fort, dans un espace donné. L’œuvre explore la
+          tension entre désir, violence et rencontre des corps.
+        </p>
+      </div>
+    </article>
+
+    <!-- Balkan Baroque -->
+    <article class="work">
+      <div class="work-media">
+        <!-- IMAGE À AJOUTER : Balkan Baroque -->
+        <div class="image-placeholder">
+          <span>IMAGE À AJOUTER</span>
+          <p>Balkan Baroque — 1997</p>
+        </div>
+      </div>
+
+      <div class="work-text">
+        <h3>Balkan Baroque</h3>
+        <p class="work-date">1997 · installation vidéo</p>
+
+        <p>
+          En réponse aux guerres des Balkans, elle passe quatre jours à
+          frotter 1 500 os de vaches ensanglantés tout en chantant des
+          chansons yougoslaves. Les os invendables à nettoyer deviennent une
+          métaphore de la guerre, du nettoyage ethnique et de la culpabilité
+          collective.
+        </p>
+
+        <div class="quiz" data-answer="b">
+          <p class="quiz-question">
+            Que représente principalement le geste de nettoyer les os dans
+            <em>Balkan Baroque</em> ?
+          </p>
+
+          <button class="quiz-option" data-value="a">
+            Une célébration des traditions rurales yougoslaves
+          </button>
+
+          <button class="quiz-option" data-value="b">
+            Une réflexion sur la guerre, la culpabilité et le nettoyage ethnique
+          </button>
+
+          <button class="quiz-option" data-value="c">
+            Une performance sur la protection des animaux
+          </button>
+
+          <p class="quiz-feedback" aria-live="polite"></p>
+        </div>
+      </div>
+    </article>
+
+    <!-- The Artist Is Present -->
+    <article class="work work-reverse">
+      <div class="work-media">
+        <!-- VIDÉO À AJOUTER : extrait de The Artist Is Present -->
+        <div class="video-placeholder">
+          <span>VIDÉO À AJOUTER</span>
+          <p>The Artist Is Present — 2010</p>
+        </div>
+      </div>
+
+      <div class="work-text">
+        <h3>The Artist Is Present</h3>
+        <p class="work-date">2010 · MoMA, New York</p>
+
+        <p>
+          Au MoMA de New York, elle reste assise en silence pendant près de
+          trois mois, échangeant un regard avec chaque visiteur qui s’assoit
+          face à elle. L’œuvre fait de la présence, du silence et du lien
+          émotionnel avec le public le cœur même de l’art.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <!-- =========================
+       SECTION 2 — PIPILOTTI RIST
+       ========================= -->
+  <section class="chapter chapter-rist" id="rist">
+    <div class="chapter-head">
+      <p class="chapter-number">02 — lumière, couleur, immersion</p>
+
+      <h2 class="chapter-title glitch" data-text="PIPILOTTI RIST">
+        PIPILOTTI RIST
+      </h2>
+
+      <p class="artist-line">
+        Pipilotti Rist est une artiste suisse dont les vidéos et
+        installations immersives mêlent corps, nature, musique et lumière.
+      </p>
+    </div>
+
+    <!-- Ever Is Over All -->
+    <article class="work">
+      <div class="work-media">
+        <!-- VIDÉO À AJOUTER : extrait de Ever Is Over All -->
+        <div class="video-placeholder">
+          <span>VIDÉO À AJOUTER</span>
+          <p>Ever Is Over All — 1997</p>
+        </div>
+      </div>
+
+      <div class="work-text">
+        <h3>Ever Is Over All</h3>
+        <p class="work-date">1997 · installation vidéo</p>
+
+        <p>
+          Installation à deux projections : d’un côté, une femme marche
+          joyeusement dans la rue en brisant les vitres de voitures avec une
+          grande fleur ; de l’autre, des fleurs rouges en gros plan. C’est
+          une œuvre féministe iconique sur la transgression, la douceur et
+          la révolte.
+        </p>
+      </div>
+    </article>
+
+    <!-- Pixel Forest -->
+    <article class="work work-reverse">
+      <div class="work-media">
+        <!-- IMAGE À AJOUTER : Pixel Forest -->
+        <div class="image-placeholder">
+          <span>IMAGE À AJOUTER</span>
+          <p>Pixel Forest — 2012 / 2016</p>
+        </div>
+      </div>
+
+      <div class="work-text">
+        <h3>Pixel Forest</h3>
+        <p class="work-date">2012 / 2016 · installation immersive</p>
+
+        <p>
+          Installation immersive faite de milliers de LED suspendues, comme
+          une forêt de pixels lumineux dans laquelle on marche. Le spectateur
+          entre littéralement dans l’image, entouré de lumière, de couleur et
+          de vidéo.
+        </p>
+      </div>
+    </article>
+
+    <!-- Sip My Ocean -->
+    <article class="work overlay-work">
+      <div class="work-media">
+        <!-- VIDÉO À AJOUTER : extrait de Sip My Ocean -->
+        <div class="video-placeholder">
+          <span>VIDÉO À AJOUTER</span>
+          <p>Sip My Ocean — 1996</p>
+        </div>
+
+        <div class="overlay-text">
+          <h3>Sip My Ocean</h3>
+          <p>
+            Installation vidéo où des images de corps, d’eau et de nature se
+            déploient dans un espace immersif, souvent avec des projections au
+            plafond et au sol. L’œuvre invite le spectateur à se laisser
+            porter par une sensation de flottement, de plaisir et de fusion
+            avec l’image.
+          </p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- =========================
+       SECTION 3 — BIENNALE NÉMO
+       ========================= -->
+  <section class="chapter chapter-nemo" id="nemo">
+    <div class="chapter-head">
+      <p class="chapter-number">03 — code, nature, identités</p>
+
+      <h2 class="chapter-title glitch" data-text="BIENNALE NÉMO">
+        BIENNALE NÉMO
+      </h2>
+
+      <p class="artist-line">
+        La Biennale Némo réunit art numérique, science, performance et
+        technologies immersives en explorant les mutations du vivant et du
+        numérique.
+      </p>
+    </div>
+
+    <!-- Madotsuki_the_Dreamer -->
+    <article class="work">
+      <div class="work-media">
+        <!-- IMAGE À AJOUTER : visuel de Madotsuki_the_Dreamer -->
+        <div class="image-placeholder">
+          <span>IMAGE À AJOUTER</span>
+          <p>Madotsuki_the_Dreamer — Ismaël Joffroy Chandoutis</p>
+        </div>
+      </div>
+
+      <div class="work-text">
+        <h3>Madotsuki_the_Dreamer</h3>
+        <p class="work-date">Ismaël Joffroy Chandoutis</p>
+
+        <p>
+          L’œuvre suit un homme qui cumule près de 74 personnalités en ligne,
+          aux positions politiques contradictoires. Elle explore la
+          fragmentation de l’identité à l’ère des réseaux sociaux, où les
+          profils peuvent devenir des masques, des rôles ou des refuges.
+        </p>
+
+        <div class="quiz" data-answer="a">
+          <p class="quiz-question">
+            Que questionne principalement cette œuvre ?
+          </p>
+
+          <button class="quiz-option" data-value="a">
+            La multiplication et la fragmentation des identités en ligne
+          </button>
+
+          <button class="quiz-option" data-value="b">
+            L’histoire des jeux vidéo dans les années 1990
+          </button>
+
+          <button class="quiz-option" data-value="c">
+            La disparition des réseaux sociaux
+          </button>
+
+          <p class="quiz-feedback" aria-live="polite"></p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 900 Something Days -->
+    <article class="work work-reverse">
+      <div class="work-media">
+        <!-- VIDÉO À AJOUTER : 900 Something Days Spent in the XXth Century -->
+        <div class="video-placeholder">
+          <span>VIDÉO À AJOUTER</span>
+          <p>900 Something Days Spent in the XXth Century</p>
+        </div>
+      </div>
+
+      <div class="work-text">
+        <h3>900 Something Days Spent in the XXth Century</h3>
+        <p class="work-date">Ismaël Joffroy Chandoutis</p>
+
+        <p>
+          L’œuvre explore la mémoire, les archives numériques et les traces
+          laissées par les images trouvées sur Internet. Elle interroge la
+          manière dont le passé revient à travers les écrans, les fragments
+          et les souvenirs reconstruits.
+        </p>
+      </div>
+    </article>
+
+    <!-- Plant Being -->
+    <article class="work">
+      <div class="work-media">
+        <!-- IMAGE À AJOUTER : Plant Being — Super Organique -->
+        <div class="image-placeholder">
+          <span>IMAGE À AJOUTER</span>
+          <p>Plant Being — Super Organique, 2025</p>
+        </div>
+      </div>
+
+      <div class="work-text">
+        <h3>Plant Being</h3>
+        <p class="work-date">2025 · Super Organique</p>
+
+        <p>
+          Installation immersive qui rend perceptible la vie « bioénergétique »
+          des plantes, à travers son et image. Elle invite à ressentir les
+          végétaux comme des êtres sensibles et communicants.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <!-- =========================
+       SECTION 4 — DONNA HARAWAY
+       ========================= -->
+  <section class="chapter chapter-haraway" id="haraway">
+    <div class="chapter-head">
+      <p class="chapter-number">04 — cyborg, science, nature</p>
+
+      <h2 class="chapter-title glitch" data-text="DONNA HARAWAY">
+        DONNA HARAWAY
+      </h2>
+
+      <p class="artist-line">
+        Donna Haraway est une théoricienne américaine dont les travaux
+        interrogent les frontières entre humain, animal, machine et nature.
+      </p>
+    </div>
+
+    <!-- Manifeste cyborg -->
+    <article class="work quote-work">
+      <div class="work-text">
+        <h3>Manifeste cyborg</h3>
+        <p class="work-date">1985 · essai</p>
+
+        <blockquote class="highlight-quote">
+          <span class="highlight-target">
+            Le cyborg est une créature de la réalité sociale autant que de la
+            fiction : il vit aux frontières entre l’organisme et la machine.
+          </span>
+        </blockquote>
+
+        <p>
+          Texte fondateur où le cyborg, hybride de machine et d’organisme,
+          sert à défaire les oppositions entre nature/culture, homme/femme,
+          humain/machine. Haraway y propose un féminisme qui embrasse la
+          technologie plutôt que de la rejeter, tout en critiquant les formes
+          de domination qu’elle peut produire.
+        </p>
+      </div>
+    </article>
+
+    <!-- Primate Visions -->
+    <article class="work work-reverse">
+      <div class="work-media">
+        <!-- IMAGE À AJOUTER : couverture de Primate Visions -->
+        <div class="image-placeholder">
+          <span>IMAGE À AJOUTER</span>
+          <p>Primate Visions — 1989</p>
+        </div>
+      </div>
+
+      <div class="work-text">
+        <h3>Primate Visions</h3>
+        <p class="work-date">1989 · essai</p>
+
+        <p>
+          Enquête sur la primatologie et les récits de l’évolution, montrant
+          comment la science projette des idées de genre, de race et de
+          colonialisme sur les animaux. Haraway y déconstruit les narrations
+          occidentales de la différence et de la survie.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <!-- =========================
+       SECTION 5 — KAÏRO
+       ========================= -->
+  <section class="chapter chapter-kairo" id="kairo">
+    <div class="chapter-head">
+      <p class="chapter-number">05 — réseau, solitude, fantômes</p>
+
+      <h2 class="chapter-title glitch" data-text="KAÏRO">
+        KAÏRO
+      </h2>
+
+      <p class="artist-line">
+        <em>Kaïro</em> est un film de Kiyoshi Kurosawa qui transforme
+        Internet en espace hanté par la solitude et la disparition.
+      </p>
+    </div>
+
+    <article class="work">
+      <div class="work-text">
+        <h3>Pulse</h3>
+        <p class="work-date">2001 · Kiyoshi Kurosawa</p>
+
+        <p>
+          Le film suit deux jeunes Tokyoïtes, Michi et Ryosuke, confrontés à
+          une mystérieuse épidémie de suicides. Ils découvrent qu’Internet
+          est hanté par des fantômes qui cherchent à entrer en contact avec
+          les vivants, et que ceux qui les rencontrent sombrent peu à peu
+          dans une solitude mortelle.
+        </p>
+
+        <p>
+          <em>Kaïro</em> entrelace deux intrigues : celle de Michi et de ses
+          collègues, bouleversés par le suicide d’un ami, et celle de
+          Ryosuke, étudiant qui se connecte pour la première fois à Internet
+          et tombe sur des vidéos étranges et des messages de fantômes.
+        </p>
+
+        <p>
+          La technologie y apparaît comme un espace ambivalent : elle promet
+          la connexion, mais produit la déconnexion. Les personnages,
+          hyperconnectés, sont paradoxalement plus seuls que jamais.
+        </p>
+
+        <p>
+          Le film brouille les limites entre réel et virtuel, vivant et mort,
+          présence et absence. Les fantômes ne viennent pas d’ailleurs : ils
+          habitent déjà notre monde numérique.
+        </p>
+
+        <p class="final-line">
+          <em>Kaïro</em> est moins un film sur les fantômes que sur la
+          solitude moderne : il transforme Internet en métaphore de
+          l’isolement existentiel.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <!-- =========================
+       SECTION 6 — THE CURSE
+       ========================= -->
+  <section class="chapter chapter-curse" id="curse">
+    <div class="chapter-head">
+      <p class="chapter-number">06 — miroir, malaise, vertu</p>
+
+      <h2 class="chapter-title glitch" data-text="THE CURSE">
+        THE CURSE
+      </h2>
+
+      <p class="artist-line">
+        <em>The Curse</em> est une série créée par Nathan Fielder et Benny
+        Safdie, qui mêle comédie noire, satire sociale et malaise permanent.
+      </p>
+    </div>
+
+    <article class="work">
+      <div class="work-text">
+        <h3>The Curse</h3>
+        <p class="work-date">2023 · série</p>
+
+        <p>
+          La série suit Asher et Whitney Siegel, un couple de jeunes mariés
+          qui tente de lancer une émission de rénovation immobilière,
+          <em>Fliplanthropy</em>, autour de maisons écologiques à Española,
+          au Nouveau-Mexique. Leur projet, présenté comme philanthropique,
+          vise à « gentrifier éthiquement » une communauté pauvre,
+          majoritairement latino et amérindienne, tout en les rendant
+          célèbres.
+        </p>
+
+        <p>
+          Tout bascule lorsqu’Asher est prétendument maudit par une petite
+          fille lors d’un tournage, événement qui va progressivement fissurer
+          son couple, sa carrière et sa perception du réel.
+        </p>
+
+        <div class="spoiler-box" id="spoilerBox">
+          <button class="spoiler-button" id="spoilerButton">
+            Alerte spoiler — révéler la fin
+          </button>
+
+          <div class="spoiler-content" id="spoilerContent" hidden>
+            <p>
+              La série se termine sur une image saisissante : Asher semble
+              littéralement s’envoler dans le ciel, comme emporté par la
+              malédiction, tandis que Whitney reste au sol. La malédiction
+              devient alors le symbole de l’effondrement de leur projet
+              moral, de leur couple et de leur désir de paraître bons.
+            </p>
+          </div>
+        </div>
+
+        <p>
+          La « malédiction » n’est pas seulement surnaturelle : elle
+          matérialise la culpabilité, la dette et les conséquences invisibles
+          des actes d’Asher et Whitney. Elle pose la question de savoir si le
+          mal peut être transféré, ou si c’est la conscience de l’avoir
+          commis qui finit par détruire.
+        </p>
+
+        <p>
+          Le cœur satirique de la série est le décalage entre l’intention
+          affichée — aider, être écolo, être bon — et la réalité : profit,
+          célébrité, contrôle. Asher et Whitney veulent être vus comme bons
+          plus qu’être effectivement bons.
+        </p>
+
+        <p class="final-line">
+          <em>The Curse</em> est une satire féroce de la vertu performative :
+          elle montre qu’une malédiction, réelle ou symbolique, n’est jamais
+          qu’un miroir grossissant des mensonges moraux qu’une société se
+          raconte sur elle-même.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <!-- =========================
+       SECTION 7 — OFF
+       ========================= -->
+  <section class="chapter chapter-off" id="off">
+    <div class="chapter-head">
+      <p class="chapter-number">07 — purification, absurde, jeu</p>
+
+      <h2 class="chapter-title glitch" data-text="OFF">
+        OFF
+      </h2>
+
+      <p class="artist-line">
+        <em>OFF</em> est un RPG indépendant créé par Mortis Ghost en 2008,
+        devenu culte pour son univers étrange, son humour noir et sa
+        réflexion sur la violence.
+      </p>
+    </div>
+
+    <article class="work">
+      <div class="work-media">
+        <!-- IMAGE À AJOUTER : le Batteur, personnage principal de OFF -->
+        <div class="image-placeholder batter-image">
+          <span>IMAGE À AJOUTER</span>
+          <p>Le Batteur — <em>OFF</em></p>
+        </div>
+      </div>
+
+      <div class="work-text">
+        <h3>Le Batteur</h3>
+        <p class="work-date">Mortis Ghost · 2008</p>
+
+        <p>
+          Le joueur incarne le Batteur, un homme en uniforme de baseball
+          armé d’une batte, envoyé pour « purifier » un monde étrange et
+          désespéré hanté par des spectres.
+        </p>
+
+        <p>
+          Guidé par le Juge, un chat parlant et philosophique, le Batteur
+          élimine les spectres et les Gardiens, sans que le jeu n’explique
+          jamais clairement si cette « purification » est un bien ou un mal.
+        </p>
+      </div>
+    </article>
+
+    <article class="work work-reverse">
+      <div class="work-media">
+        <!-- IMAGES À AJOUTER : villageois ou habitants de OFF -->
+        <div class="image-placeholder villagers-image">
+          <span>IMAGES À AJOUTER</span>
+          <p>Villageois / habitants de <em>OFF</em></p>
+        </div>
+      </div>
+
+      <div class="work-text">
+        <h3>Purifier, est-ce sauver ?</h3>
+
+        <p>
+          <em>OFF</em> pose une question simple mais dérangeante : purifier,
+          est-ce sauver ou détruire ? Le Batteur élimine tout ce qui
+          « dérange » — spectres, Gardiens, habitants — au nom d’un ordre
+          supérieur, sans jamais questionner la légitimité de sa mission.
+        </p>
+
+        <p>
+          Les zones du jeu sont des allégories de la production industrielle :
+          mines de sucre, usines de viande, plastique liquide, travailleurs
+          broyés par des figures autoritaires. C’est une critique de la
+          modernité capitaliste, où l’humain est réduit à une ressource.
+        </p>
+
+        <p>
+          En demandant au joueur son nom avant même de commencer, le jeu
+          refuse la distance morale habituelle du RPG. On ne « joue » pas un
+          héros : on devient l’instrument d’une volonté de mort.
+        </p>
+
+        <p class="final-line">
+          <em>OFF</em> est moins un RPG qu’une méditation interactive sur la
+          violence de la pureté : il montre qu’un monde peut être « purifié »
+          jusqu’à disparaître.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <!-- =========================
+       CONCLUSION
+       ========================= -->
+  <section class="ending" id="conclusion">
+    <p class="opening-number">fin de l’archive</p>
+
+    <h2 class="ending-title glitch" data-text="CULTURE, ART, NUMÉRIQUE">
+      CULTURE, ART, NUMÉRIQUE
+    </h2>
+
+    <p>
+      L’art moderne, la culture numérique et la pop culture ne sont pas
+      séparés : ils se répondent. Le corps devient performance, l’écran
+      devient espace, le jeu devient réflexion, et la mémoire se transforme
+      en image.
+    </p>
+
+    <p>
+      Ces références m’inspirent parce qu’elles ne donnent pas de réponses
+      simples. Elles rendent visibles les tensions entre présence et
+      distance, nature et technologie, désir et violence, connexion et
+      solitude.
+    </p>
+
+    <p>
+      L’archive ne conserve pas seulement : elle fait revenir, déplace et
+      transforme ce que nous croyons connaître.
+    </p>
+  </section>
+
+  <footer class="site-footer">
+    <p>
+      Archive Sensible — projet personnel.<br />
+      Images, vidéos et œuvres citées dans un cadre pédagogique et non
+      commercial.
+    </p>
+  </footer>
+
+  <!-- Message réactif -->
+  <div class="archive-message" id="archiveMessage" aria-live="polite"></div>
+</body>
+</html>
