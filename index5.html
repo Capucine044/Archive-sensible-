@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive Run — Jeu de plateforme</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="game-header">
+    <p class="game-subtitle">Archive Run</p>
+    <h1 class="game-title">Traverse l’archive</h1>
+    <p class="game-help">
+      Flèches ou <span>Q / D</span> pour bouger — Espace ou flèche du haut pour sauter.
+      Évite les ennemis et atteins la porte de fin.
+    </p>
+  </header>
+
+  <main class="game-wrapper">
+    <div class="hud">
+      <span id="levelLabel">Niveau 1</span>
+      <span id="livesLabel">Vies : 3</span>
+    </div>
+
+    <canvas id="gameCanvas" width="960" height="540"></canvas>
+
+    <div class="game-buttons">
+      <button id="restartButton">Recommencer le niveau</button>
+    </div>
+  </main>
+
+  <!-- Fenêtre de fin de niveau -->
+  <section id="projectModal" class="project-modal" hidden>
+    <div class="project-card">
+      <p class="project-number" id="projectNumber">Projet 01</p>
+      <h2 id="projectTitle">Rhythm 0</h2>
+      <p class="project-artist" id="projectArtist">Marina Abramović — 1974</p>
+
+      <div class="project-image">
+        <img id="projectImage" src="" alt="">
+      </div>
+
+      <p id="projectText"></p>
+
+      <button id="nextLevelButton">Niveau suivant</button>
+    </div>
+  </section>
+
+  <!-- Écran de victoire -->
+  <section id="winScreen" class="win-screen" hidden>
+    <div class="win-card">
+      <h2>Archive traversée</h2>
+      <p>
+        Tu as traversé les sept niveaux. Corps, lumière, code, cyborg, réseau,
+        malaise et jeu : l’archive ne conserve pas seulement, elle transforme.
+      </p>
+      <button id="restartGameButton">Rejouer depuis le début</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
