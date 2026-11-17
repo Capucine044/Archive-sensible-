@@ -19,6 +19,7 @@ const restartGameButton = document.getElementById("restartGameButton");
 const GRAVITY = 0.65;
 const MOVE_SPEED = 4.2;
 const JUMP_FORCE = -12.5;
+const LIVES_PER_LEVEL = 3;
 
 const projects = [
   {
@@ -27,7 +28,8 @@ const projects = [
     artist: "Marina Abramović — 1974",
     image: "images/rhythm0.jpg",
     text: "Pendant six heures, Marina Abramović se place passivement devant 72 objets, dont un couteau et une arme, que le public peut utiliser sur elle. La performance révèle l’agressivité, la vulnérabilité et la responsabilité du spectateur.",
-    theme: "corps"
+    theme: "corps",
+    enemy: "weapon"
   },
   {
     number: "Projet 02",
@@ -35,7 +37,8 @@ const projects = [
     artist: "Pipilotti Rist — 1997",
     image: "images/ever-is-over-all.jpg",
     text: "Dans cette installation vidéo, une femme marche joyeusement dans la rue en brisant des vitres avec une grande fleur, tandis que des fleurs rouges occupent l’autre projection. L’œuvre mêle douceur, transgression et révolte féministe.",
-    theme: "couleur"
+    theme: "couleur",
+    enemy: "flower"
   },
   {
     number: "Projet 03",
@@ -43,7 +46,8 @@ const projects = [
     artist: "Pipilotti Rist — 2012–2016",
     image: "images/pixel-forest.jpg",
     text: "Pixel Forest est une installation immersive composée de milliers de LED suspendues. Le spectateur entre littéralement dans l’image, entouré de lumière, de couleur et de vidéo : une forêt de pixels habitable.",
-    theme: "immersion"
+    theme: "immersion",
+    enemy: "pixel"
   },
   {
     number: "Projet 04",
@@ -51,7 +55,8 @@ const projects = [
     artist: "Ismäel Joffroy Chandoutis",
     image: "images/madotsuki.jpg",
     text: "L’œuvre suit un homme qui cumule près de 74 personnalités en ligne, aux positions politiques contradictoires. Elle interroge la fragmentation de l’identité à l’ère des réseaux sociaux, où les profils deviennent masques, rôles ou refuges.",
-    theme: "identite"
+    theme: "identite",
+    enemy: "computer"
   },
   {
     number: "Projet 05",
@@ -59,7 +64,8 @@ const projects = [
     artist: "Donna Haraway — 1985",
     image: "images/cyborg.jpg",
     text: "Le cyborg est une créature à la frontière entre l’organisme et la machine. Dans son Manifeste cyborg, Donna Haraway utilise cette figure pour défaire les oppositions entre nature et culture, humain et machine, et repenser le féminisme à l’ère technologique.",
-    theme: "cyborg"
+    theme: "cyborg",
+    enemy: "robot"
   },
   {
     number: "Projet 06",
@@ -67,7 +73,8 @@ const projects = [
     artist: "Kiyoshi Kurosawa — 2001",
     image: "images/pulse.jpg",
     text: "Dans Pulse, Internet devient un espace hanté par la solitude et la disparition. Le film explore le paradoxe d’une époque hyperconnectée où la technologie promet le lien tout en produisant l’isolement.",
-    theme: "reseau"
+    theme: "reseau",
+    enemy: "ghostComputer"
   },
   {
     number: "Projet 07",
@@ -75,7 +82,8 @@ const projects = [
     artist: "Mortis Ghost — 2008",
     image: "images/off.jpg",
     text: "OFF est un RPG indépendant dans lequel le Batteur est envoyé purifier un monde étrange et désespéré. Le jeu transforme la purification en question morale : purifier, est-ce sauver ou détruire ?",
-    theme: "jeu"
+    theme: "jeu",
+    enemy: "baseball"
   }
 ];
 
@@ -213,7 +221,7 @@ const themeColors = {
 };
 
 let currentLevel = 0;
-let lives = 3;
+let levelLives = LIVES_PER_LEVEL;
 let keys = {};
 let gameRunning = true;
 
@@ -230,7 +238,6 @@ const player = {
 
 function loadLevel(index) {
   const level = levels[index];
-  const colors = themeColors[level.theme];
 
   player.x = 40;
   player.y = 420;
@@ -246,10 +253,14 @@ function loadLevel(index) {
   });
 
   levelLabel.textContent = `Niveau ${index + 1} / ${levels.length}`;
-  livesLabel.textContent = `Vies : ${lives}`;
+  livesLabel.textContent = `Vies du niveau : ${levelLives}`;
 
-  canvas.dataset.theme = level.theme;
   gameRunning = true;
+}
+
+function restartCurrentLevel() {
+  levelLives = LIVES_PER_LEVEL;
+  loadLevel(currentLevel);
 }
 
 function rectCollide(a, b) {
@@ -356,13 +367,11 @@ function checkGoal(level) {
 }
 
 function loseLife() {
-  lives--;
-  livesLabel.textContent = `Vies : ${lives}`;
+  levelLives--;
+  livesLabel.textContent = `Vies du niveau : ${levelLives}`;
 
-  if (lives <= 0) {
-    lives = 3;
-    currentLevel = 0;
-    loadLevel(currentLevel);
+  if (levelLives <= 0) {
+    restartCurrentLevel();
     return;
   }
 
@@ -381,6 +390,132 @@ function showProject(index) {
   projectImage.alt = `Illustration du projet ${project.title}`;
 
   projectModal.hidden = false;
+}
+
+function drawWeapon(x, y, color) {
+  ctx.fillStyle = color;
+  ctx.fillRect(x + 4, y + 12, 24, 6);
+  ctx.fillRect(x + 22, y + 4, 6, 20);
+  ctx.fillRect(x + 2, y + 20, 10, 6);
+
+  ctx.fillStyle = "#050507";
+  ctx.fillRect(x + 24, y + 6, 3, 3);
+}
+
+function drawFlower(x, y, color) {
+  ctx.fillStyle = color;
+
+  ctx.fillRect(x + 12, y + 12, 8, 8);
+  ctx.fillRect(x + 6, y + 6, 8, 8);
+  ctx.fillRect(x + 18, y + 6, 8, 8);
+  ctx.fillRect(x + 6, y + 18, 8, 8);
+  ctx.fillRect(x + 18, y + 18, 8, 8);
+
+  ctx.fillStyle = "#050507";
+  ctx.fillRect(x + 14, y + 14, 5, 5);
+
+  ctx.fillStyle = "#1d7a4a";
+  ctx.fillRect(x + 15, y + 26, 4, 8);
+}
+
+function drawPixel(x, y, color) {
+  ctx.fillStyle = color;
+  ctx.fillRect(x + 6, y + 6, 20, 20);
+
+  ctx.fillStyle = "#ffffff";
+  ctx.fillRect(x + 10, y + 10, 5, 5);
+  ctx.fillRect(x + 19, y + 10, 5, 5);
+  ctx.fillRect(x + 10, y + 19, 14, 5);
+}
+
+function drawComputer(x, y, color, ghost) {
+  ctx.fillStyle = color;
+  ctx.fillRect(x + 3, y + 3, 28, 20);
+  ctx.fillRect(x + 10, y + 23, 14, 6);
+
+  ctx.fillStyle = ghost ? "#050507" : "#0b0b12";
+  ctx.fillRect(x + 7, y + 7, 20, 12);
+
+  ctx.fillStyle = ghost ? "#ff4d4d" : color;
+  ctx.fillRect(x + 10, y + 10, 4, 4);
+  ctx.fillRect(x + 18, y + 10, 4, 4);
+
+  ctx.fillStyle = ghost ? "#ff4d4d" : "#050507";
+  ctx.fillRect(x + 12, y + 16, 10, 2);
+}
+
+function drawRobot(x, y, color) {
+  ctx.fillStyle = color;
+  ctx.fillRect(x + 5, y + 4, 24, 20);
+  ctx.fillRect(x + 10, y, 14, 6);
+
+  ctx.fillStyle = "#050507";
+  ctx.fillRect(x + 10, y + 10, 5, 5);
+  ctx.fillRect(x + 19, y + 10, 5, 5);
+
+  ctx.fillStyle = "#050507";
+  ctx.fillRect(x + 11, y + 19, 12, 3);
+
+  ctx.fillStyle = color;
+  ctx.fillRect(x + 2, y + 12, 3, 8);
+  ctx.fillRect(x + 29, y + 12, 3, 8);
+}
+
+function drawBaseball(x, y, color) {
+  ctx.fillStyle = color;
+  ctx.beginPath();
+  ctx.arc(x + 17, y + 15, 13, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.fillStyle = "#050507";
+  ctx.fillRect(x + 10, y + 10, 3, 3);
+  ctx.fillRect(x + 21, y + 10, 3, 3);
+  ctx.fillRect(x + 13, y + 20, 8, 2);
+
+  ctx.strokeStyle = "#050507";
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(x + 8, y + 8);
+  ctx.quadraticCurveTo(x + 17, y + 15, x + 8, y + 22);
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(x + 26, y + 8);
+  ctx.quadraticCurveTo(x + 17, y + 15, x + 26, y + 22);
+  ctx.stroke();
+}
+
+function drawEnemy(level, enemy) {
+  const colors = themeColors[level.theme];
+  const type = projects[currentLevel].enemy;
+
+  if (type === "weapon") {
+    drawWeapon(enemy.currentX, enemy.y, colors.accent);
+  }
+
+  if (type === "flower") {
+    drawFlower(enemy.currentX, enemy.y, colors.accent);
+  }
+
+  if (type === "pixel") {
+    drawPixel(enemy.currentX, enemy.y, colors.accent);
+  }
+
+  if (type === "computer") {
+    drawComputer(enemy.currentX, enemy.y, colors.accent, false);
+  }
+
+  if (type === "robot") {
+    drawRobot(enemy.currentX, enemy.y, colors.accent);
+  }
+
+  if (type === "ghostComputer") {
+    drawComputer(enemy.currentX, enemy.y, colors.accent, true);
+  }
+
+  if (type === "baseball") {
+    drawBaseball(enemy.currentX, enemy.y, colors.accent);
+  }
 }
 
 function drawLevel(level) {
@@ -416,12 +551,7 @@ function drawLevel(level) {
   });
 
   level.enemies.forEach(enemy => {
-    ctx.fillStyle = colors.accent;
-    ctx.fillRect(enemy.currentX, enemy.y, 34, 30);
-
-    ctx.fillStyle = "#050507";
-    ctx.fillRect(enemy.currentX + 7, enemy.y + 9, 6, 6);
-    ctx.fillRect(enemy.currentX + 21, enemy.y + 9, 6, 6);
+    drawEnemy(level, enemy);
   });
 
   ctx.fillStyle = colors.accent;
@@ -494,6 +624,7 @@ nextLevelButton.addEventListener("click", () => {
 
   if (currentLevel < levels.length - 1) {
     currentLevel++;
+    levelLives = LIVES_PER_LEVEL;
     loadLevel(currentLevel);
   } else {
     winScreen.hidden = false;
@@ -501,13 +632,13 @@ nextLevelButton.addEventListener("click", () => {
 });
 
 restartButton.addEventListener("click", () => {
-  loadLevel(currentLevel);
+  restartCurrentLevel();
 });
 
 restartGameButton.addEventListener("click", () => {
   winScreen.hidden = true;
   currentLevel = 0;
-  lives = 3;
+  levelLives = LIVES_PER_LEVEL;
   loadLevel(currentLevel);
 });
 
